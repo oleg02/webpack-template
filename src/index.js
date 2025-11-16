@@ -6,29 +6,14 @@ import './scss/main.scss'
 // CSS (example)
 import './css/main.css'
 
-// Bootstrap (example)
-// import Bootstrap from 'bootstrap/dist/css/bootstrap.min.css'
-// import 'bootstrap/dist/css/bootstrap.min.css'
+// Vue
+import Vue from 'vue'
+import store from './store'
 
-// import 'vue'
-// import Vue from 'vue'
-// window.Vue = require('vue')
-// import store from './store'
+// Components
+Vue.component('photo-editor', require('./components/PhotoEditor.vue').default)
 
-// Vue.component('example-component', require('./components/Example.vue').default)
-
-// With vuex
-// const app = new Vue({
-//   data () {
-//     return {
-//       component: false,
-//     }
-//   },
-//   store,
-//   el: '#app'
-// })
-
-//* Without vuex and store
-// const app = new Vue({
-//   el: '#app'
-// })
+const app = new Vue({
+  store,
+  el: '#app'
+})
